@@ -41,6 +41,11 @@ nav ul li a:hover {
     background-color: #1abc9c;
 }
 
+nav ul li a.active {
+    background-color: #1abc9c;
+    font-weight: bold;
+}
+
 /* Page content */
 .content {
     margin-top: 60px; /* Offset for fixed nav */
