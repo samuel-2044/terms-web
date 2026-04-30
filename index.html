@@ -7,36 +7,81 @@
     <title>Internet Terminology - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header / Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="www.html">World Wide Web</a></li>
-            <li><a href="tcpip.html">TCP/IP</a></li>
-            <li><a href="browsers.html">Web Browsers</a></li>
-            <li><a href="webserver.html">Web Servers</a></li>
-            <li><a href="urls.html">URL</a></li>
-            <li><a href="dns.html">DNS</a></li>
-            <li><a href="http.html">HTTP</a></li>
-            <li><a href="intranet.html">Intranet</a></li>
-            <li><a href="extranet.html">Extranet</a></li>
-            <li><a href="multitier.html">Multitier Architecture</a></li>
-            <li><a href="ftp.html">FTP</a></li>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="web1.0.html">Web 1.0</a></li>
-            <li><a href="web2.0.html">Web 2.0</a></li>
-            <li><a href="web3.0.html">Web 3.0</a></li>
-            <li><a href="web4.0.html">Web 4.0</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>Internet Terminology</h1>
-        <p>Welcome to the Internet Terminology website. Here you can learn about various terms related to the Internet and web technologies. Each term has its own dedicated page with detailed explanations and visual aids.</p>
-        <p>Use the navigation bar above to explore each term.</p>
-    </div>
-    <footer>
-        <p>&copy; 2026 Internet Terminology Website. All rights reserved.</p>
+
+    <!-- ===== HEADER (Reusable) ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🌐 NetTerms</h2>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="www.html">WWW</a></li>
+                <li><a href="tcpip.html">TCP/IP</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="webserver.html">Servers</a></li>
+                <li><a href="urls.html">URL</a></li>
+                <li><a href="dns.html">DNS</a></li>
+                <li><a href="http.html">HTTP</a></li>
+                <li><a href="intranet.html">Intranet</a></li>
+                <li><a href="extranet.html">Extranet</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="multitier.html">Multitier</a></li>
+                        <li><a href="ftp.html">FTP</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="web1.0.html">Web1</a></li>
+                        <li><a href="web2.0.html">Web2</a></li>
+                        <li><a href="web3.0.html">Web3</a></li>
+                        <li><a href="web4.0.html">Web4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+        <section class="hero">
+            <h1>Internet Terminology</h1>
+            <p class="intro">
+                Welcome to your complete guide to Internet and Web technologies.
+            </p>
+        </section>
+
+        <section class="info">
+            <p>
+                This website explains key concepts like protocols, web architecture,
+                and modern web evolution in a simple and structured way.
+            </p>
+
+            <p>
+                Each topic has its own page with clear explanations, examples,
+                and visuals to help you understand faster.
+            </p>
+
+            <div class="cta">
+                <p>👉 Use the navigation bar above to explore topics.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER (Reusable) ===== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Internet Terminology</p>
+            <p class="footer-links">
+                Built for learning • Web Tech • Networking
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>
