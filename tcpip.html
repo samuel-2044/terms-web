@@ -1,67 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Internet Terminology -     TCP/IP - Internet Terminology">
+    <meta name="description" content="Internet Terminology - TCP/IP">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCP/IP - Internet Terminology</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header / Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="www.html">World Wide Web</a></li>
-            <li><a href="tcpip.html" class="active">TCP/IP</a></li>
-            <li><a href="browsers.html">Web Browsers</a></li>
-            <li><a href="webserver.html">Web Servers</a></li>
-            <li><a href="urls.html">URL</a></li>
-            <li><a href="dns.html">DNS</a></li>
-            <li><a href="http.html">HTTP</a></li>
-            <li><a href="intranet.html">Intranet</a></li>
-            <li><a href="extranet.html">Extranet</a></li>
-            <li><a href="multitier.html">Multitier Architecture</a></li>
-            <li><a href="ftp.html">FTP</a></li>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="web1.0.html">Web 1.0</a></li>
-            <li><a href="web2.0.html">Web 2.0</a></li>
-            <li><a href="web3.0.html">Web 3.0</a></li>
-            <li><a href="web4.0.html">Web 4.0</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>Transmission Control Protocol/Internet Protocol (TCP/IP)</h1>
-        <img src="images/tcp:ip.jpg" alt="TCP/IP protocol illustration">
-        <p><strong>TCP/IP</strong> (Transmission Control Protocol/Internet Protocol) is the fundamental communication protocol suite that enables devices to connect and communicate over the Internet and most modern networks. It was developed in the 1970s by Vint Cerf and Bob Kahn and became the standard for ARPANET, the precursor to the Internet.</p>
-        <h2>Layered Architecture</h2>
-        <ul>
-            <li><strong>Application Layer:</strong> Protocols like HTTP, FTP, SMTP, DNS.</li>
-            <li><strong>Transport Layer:</strong> TCP (reliable, connection-oriented), UDP (faster, connectionless).</li>
-            <li><strong>Internet Layer:</strong> IP (addressing and routing), ICMP, ARP.</li>
-            <li><strong>Network Access Layer:</strong> Handles physical transmission (Ethernet, Wi-Fi).</li>
-        </ul>
-        <h2>Key Protocols</h2>
-        <ul>
-            <li><strong>TCP:</strong> Ensures reliable, ordered delivery of data between applications.</li>
-            <li><strong>IP:</strong> Handles addressing and routing of packets across networks.</li>
-            <li><strong>UDP:</strong> Used for applications needing speed over reliability (e.g., streaming, gaming).</li>
-        </ul>
-        <h2>Use Cases</h2>
-        <ul>
-            <li>Web browsing, email, file transfer, streaming, online gaming, VoIP.</li>
-            <li>Enables the Internet, intranets, and most private networks.</li>
-        </ul>
-        <h2>Security Considerations</h2>
-        <ul>
-            <li>TCP/IP was not designed with security in mind; encryption and authentication are added by higher-level protocols (e.g., HTTPS, SSH).</li>
-            <li>Vulnerable to attacks like IP spoofing, packet sniffing, and DDoS.</li>
-        </ul>
-        <h2>Fun Fact</h2>
-        <p>Every device on the Internet uses a unique IP address, either IPv4 (e.g., 192.168.1.1) or IPv6 (e.g., 2001:0db8::1).</p>
-    </div>
-    <footer>
-        <p>&copy; 2026 Internet Terminology Website. All rights reserved.</p>
+
+    <!-- ===== HEADER (Reusable) ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🌐 NetTerms</h2>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="www.html">WWW</a></li>
+                <li><a href="tcpip.html" class="active">TCP/IP</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="webserver.html">Servers</a></li>
+                <li><a href="urls.html">URL</a></li>
+                <li><a href="dns.html">DNS</a></li>
+                <li><a href="http.html">HTTP</a></li>
+                <li><a href="intranet.html">Intranet</a></li>
+                <li><a href="extranet.html">Extranet</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="multitier.html">Multitier</a></li>
+                        <li><a href="ftp.html">FTP</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="web1.0.html">Web1</a></li>
+                        <li><a href="web2.0.html">Web2</a></li>
+                        <li><a href="web3.0.html">Web3</a></li>
+                        <li><a href="web4.0.html">Web4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+        <section class="hero">
+            <h1>TCP/IP Protocol Suite</h1>
+            <p class="intro">The foundation of communication across the Internet and modern networks.</p>
+        </section>
+
+        <section class="info">
+
+            <img src="images/tcpip.jpg" alt="TCP/IP protocol illustration">
+
+            <h2>What is TCP/IP?</h2>
+            <p>
+                TCP/IP (Transmission Control Protocol/Internet Protocol) is a set of communication
+                protocols that enables devices to connect and exchange data over the Internet and
+                private networks.
+            </p>
+
+            <h2>TCP/IP Layer Model</h2>
+            <ul>
+                <li><strong>Application Layer:</strong> HTTP, FTP, SMTP, DNS</li>
+                <li><strong>Transport Layer:</strong> TCP (reliable), UDP (fast)</li>
+                <li><strong>Internet Layer:</strong> IP, ICMP, ARP</li>
+                <li><strong>Network Access Layer:</strong> Ethernet, Wi-Fi</li>
+            </ul>
+
+            <h2>Key Protocols</h2>
+            <ul>
+                <li><strong>TCP:</strong> Ensures reliable, ordered data delivery</li>
+                <li><strong>IP:</strong> Handles addressing and routing of packets</li>
+                <li><strong>UDP:</strong> Fast communication with no delivery guarantees</li>
+            </ul>
+
+            <h2>Use Cases</h2>
+            <ul>
+                <li>Web browsing (HTTP/HTTPS)</li>
+                <li>Email communication (SMTP)</li>
+                <li>File transfers (FTP)</li>
+                <li>Streaming and online gaming</li>
+                <li>VoIP and real-time communication</li>
+            </ul>
+
+            <h2>Security Notes</h2>
+            <ul>
+                <li>TCP/IP itself does not provide encryption</li>
+                <li>Security is handled by higher protocols like HTTPS and SSH</li>
+                <li>Vulnerable to attacks like sniffing and spoofing without protection layers</li>
+            </ul>
+
+            <div class="cta">
+                <p>💡 TCP/IP is the “language” that makes the Internet possible.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Reusable) ===== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Internet Terminology</p>
+            <p class="footer-links">
+                Built for learning • Web Tech • Networking
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>

@@ -1,43 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Internet Terminology -     Web 1.0 - Internet Terminology">
+    <meta name="description" content="Internet Terminology - Web 1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web 1.0 - Internet Terminology</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header / Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="www.html">World Wide Web</a></li>
-            <li><a href="tcpip.html">TCP/IP</a></li>
-            <li><a href="browsers.html">Web Browsers</a></li>
-            <li><a href="webserver.html">Web Servers</a></li>
-            <li><a href="urls.html">URL</a></li>
-            <li><a href="dns.html">DNS</a></li>
-            <li><a href="http.html">HTTP</a></li>
-            <li><a href="intranet.html">Intranet</a></li>
-            <li><a href="extranet.html">Extranet</a></li>
-            <li><a href="multitier.html">Multitier Architecture</a></li>
-            <li><a href="ftp.html">FTP</a></li>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="web1.0.html" class="active">Web 1.0</a></li>
-            <li><a href="web2.0.html">Web 2.0</a></li>
-            <li><a href="web3.0.html">Web 3.0</a></li>
-            <li><a href="web4.0.html">Web 4.0</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>Web 1.0</h1>
-        <img src="images/web1.0" alt="Web 1.0 illustration">
-        <p>Web 1.0 refers to the first stage of the World Wide Web's evolution, characterized by static web pages and limited user interaction. In this era, websites were primarily informational, with content created by a few authors and consumed by many users. There was minimal user-generated content or interactivity.</p>
-        <p>Web 1.0 technologies included basic HTML, GIF images, and simple forms. Examples of Web 1.0 sites include early versions of Yahoo!, Netscape, and personal homepages.</p>
-    </div>
-    <footer>
-        <p>&copy; 2026 Internet Terminology Website. All rights reserved.</p>
+
+    <!-- ===== HEADER (Reusable) ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🌐 NetTerms</h2>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="www.html">WWW</a></li>
+                <li><a href="tcpip.html">TCP/IP</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="webserver.html">Servers</a></li>
+                <li><a href="urls.html">URL</a></li>
+                <li><a href="dns.html">DNS</a></li>
+                <li><a href="http.html">HTTP</a></li>
+                <li><a href="intranet.html">Intranet</a></li>
+                <li><a href="extranet.html">Extranet</a></li>
+                <li><a href="multitier.html">Multitier</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ftp.html">FTP</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="web1.0.html" class="active">Web1</a></li>
+                        <li><a href="web2.0.html">Web2</a></li>
+                        <li><a href="web3.0.html">Web3</a></li>
+                        <li><a href="web4.0.html">Web4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+        <section class="hero">
+            <h1>Web 1.0</h1>
+            <p class="intro">The first generation of the World Wide Web (read-only web).</p>
+        </section>
+
+        <section class="info">
+
+            <img src="images/web1.0.jpg" alt="Web 1.0 illustration">
+
+            <h2>What is Web 1.0?</h2>
+            <p>
+                Web 1.0 refers to the earliest stage of the World Wide Web, where websites were static
+                and users could only read information without interacting or contributing content.
+            </p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>Static web pages (read-only content)</li>
+                <li>No user interaction or comments</li>
+                <li>Content created by developers only</li>
+                <li>Simple HTML-based websites</li>
+            </ul>
+
+            <h2>Technologies Used</h2>
+            <ul>
+                <li>Basic HTML</li>
+                <li>Simple images (GIF, JPG)</li>
+                <li>Static hosting servers</li>
+            </ul>
+
+            <h2>Examples</h2>
+            <ul>
+                <li>Early Yahoo! directories</li>
+                <li>Early Netscape websites</li>
+                <li>Personal static homepages</li>
+            </ul>
+
+            <div class="cta">
+                <p>💡 Web 1.0 = “Read-only Internet”</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Reusable) ===== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Internet Terminology</p>
+            <p class="footer-links">
+                Built for learning • Web Tech • Networking
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>

@@ -1,43 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Internet Terminology -     Web 3.0 - Internet Terminology">
+    <meta name="description" content="Internet Terminology - Web 3.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web 3.0 - Internet Terminology</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header / Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="www.html">World Wide Web</a></li>
-            <li><a href="tcpip.html">TCP/IP</a></li>
-            <li><a href="browsers.html">Web Browsers</a></li>
-            <li><a href="webserver.html">Web Servers</a></li>
-            <li><a href="urls.html">URL</a></li>
-            <li><a href="dns.html">DNS</a></li>
-            <li><a href="http.html">HTTP</a></li>
-            <li><a href="intranet.html">Intranet</a></li>
-            <li><a href="extranet.html">Extranet</a></li>
-            <li><a href="multitier.html">Multitier Architecture</a></li>
-            <li><a href="ftp.html">FTP</a></li>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="web1.0.html">Web 1.0</a></li>
-            <li><a href="web2.0.html">Web 2.0</a></li>
-            <li><a href="web3.0.html" class="active">Web 3.0</a></li>
-            <li><a href="web4.0.html">Web 4.0</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>Web 3.0</h1>
-        <img src="images/web1.0" alt="Illustration of web evolution (Web 3.0 era)">
-        <p>Web 3.0 refers to the third stage of the World Wide Web's evolution, characterized by the rise of decentralized technologies, blockchain, and the semantic web. It aims to create a more intelligent, connected, and open web where data is interconnected and machines can understand and interpret information like humans.</p>
-        <p>Key features of Web 3.0 include decentralized applications (dApps), smart contracts, non-fungible tokens (NFTs), and the use of artificial intelligence to provide personalized and context-aware experiences. Technologies like blockchain enable trustless interactions and data ownership.</p>
-    </div>
-    <footer>
-        <p>&copy; 2026 Internet Terminology Website. All rights reserved.</p>
+
+    <!-- ===== HEADER (Reusable) ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🌐 NetTerms</h2>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="www.html">WWW</a></li>
+                <li><a href="tcpip.html">TCP/IP</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="webserver.html">Servers</a></li>
+                <li><a href="urls.html">URL</a></li>
+                <li><a href="dns.html">DNS</a></li>
+                <li><a href="http.html">HTTP</a></li>
+                <li><a href="intranet.html">Intranet</a></li>
+                <li><a href="extranet.html">Extranet</a></li>
+                <li><a href="multitier.html">Multitier</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ftp.html">FTP</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="web1.0.html">Web1</a></li>
+                        <li><a href="web2.0.html">Web2</a></li>
+                        <li><a href="web3.0.html" class="active">Web3</a></li>
+                        <li><a href="web4.0.html">Web4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+        <section class="hero">
+            <h1>Web 3.0</h1>
+            <p class="intro">The intelligent, decentralized, and semantic web era.</p>
+        </section>
+
+        <section class="info">
+
+            <img src="images/web3.0.jpg" alt="Web 3.0 illustration">
+
+            <h2>What is Web 3.0?</h2>
+            <p>
+                Web 3.0 is the third generation of the World Wide Web, focusing on decentralization,
+                artificial intelligence, and semantic understanding of data.
+            </p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>Decentralized web applications (dApps)</li>
+                <li>Blockchain-based systems</li>
+                <li>Semantic web (machine-readable data)</li>
+                <li>AI-powered personalization</li>
+                <li>User data ownership and privacy</li>
+            </ul>
+
+            <h2>Core Technologies</h2>
+            <ul>
+                <li>Blockchain (distributed ledger systems)</li>
+                <li>Smart contracts</li>
+                <li>Artificial Intelligence (AI) & Machine Learning</li>
+                <li>Cryptocurrencies and NFTs</li>
+            </ul>
+
+            <h2>Examples</h2>
+            <ul>
+                <li>Decentralized finance (DeFi) platforms</li>
+                <li>Blockchain apps like Ethereum</li>
+                <li>AI-driven recommendation systems</li>
+            </ul>
+
+            <div class="cta">
+                <p>💡 Web 3.0 = “Smart + Decentralized + User-owned Internet”</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Reusable) ===== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Internet Terminology</p>
+            <p class="footer-links">
+                Built for learning • Web Tech • Networking
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>

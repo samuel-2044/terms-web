@@ -1,43 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Internet Terminology -     Web 4.0 - Internet Terminology">
+    <meta name="description" content="Internet Terminology - Web 4.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web 4.0 - Internet Terminology</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header / Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="www.html">World Wide Web</a></li>
-            <li><a href="tcpip.html">TCP/IP</a></li>
-            <li><a href="browsers.html">Web Browsers</a></li>
-            <li><a href="webserver.html">Web Servers</a></li>
-            <li><a href="urls.html">URL</a></li>
-            <li><a href="dns.html">DNS</a></li>
-            <li><a href="http.html">HTTP</a></li>
-            <li><a href="intranet.html">Intranet</a></li>
-            <li><a href="extranet.html">Extranet</a></li>
-            <li><a href="multitier.html">Multitier Architecture</a></li>
-            <li><a href="ftp.html">FTP</a></li>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="web1.0.html">Web 1.0</a></li>
-            <li><a href="web2.0.html">Web 2.0</a></li>
-            <li><a href="web3.0.html">Web 3.0</a></li>
-            <li><a href="web4.0.html" class="active">Web 4.0</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>Web 4.0</h1>
-        <img src="images/web1.0" alt="Illustration of web evolution (Web 4.0 era)">
-        <p>Web 4.0, also known as the Symbiotic Web, is the envisioned fourth stage of the World Wide Web's evolution. It emphasizes the symbiotic relationship between humans and machines, where the web becomes more intuitive, intelligent, and integrated into daily life.</p>
-        <p>Web 4.0 aims to create a seamless interaction between humans and artificial intelligence, with the web acting as a proactive assistant that anticipates needs and provides personalized experiences. It integrates technologies like advanced AI, the Internet of Things (IoT), augmented reality (AR), and ubiquitous computing.</p>
-    </div>
-    <footer>
-        <p>&copy; 2026 Internet Terminology Website. All rights reserved.</p>
+
+    <!-- ===== HEADER (Reusable) ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🌐 NetTerms</h2>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="www.html">WWW</a></li>
+                <li><a href="tcpip.html">TCP/IP</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="webserver.html">Servers</a></li>
+                <li><a href="urls.html">URL</a></li>
+                <li><a href="dns.html">DNS</a></li>
+                <li><a href="http.html">HTTP</a></li>
+                <li><a href="intranet.html">Intranet</a></li>
+                <li><a href="extranet.html">Extranet</a></li>
+                <li><a href="multitier.html">Multitier</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ftp.html">FTP</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="web1.0.html">Web1</a></li>
+                        <li><a href="web2.0.html">Web2</a></li>
+                        <li><a href="web3.0.html">Web3</a></li>
+                        <li><a href="web4.0.html" class="active">Web4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+        <section class="hero">
+            <h1>Web 4.0</h1>
+            <p class="intro">The intelligent, immersive, and symbiotic web era.</p>
+        </section>
+
+        <section class="info">
+
+            <img src="images/web4.0.jpg" alt="Web 4.0 illustration">
+
+            <h2>What is Web 4.0?</h2>
+            <p>
+                Web 4.0 is the fourth stage of the World Wide Web, where humans and machines
+                interact seamlessly through intelligent systems that anticipate user needs.
+            </p>
+
+            <h2>Key Features</h2>
+            <ul>
+                <li>AI-driven decision making and automation</li>
+                <li>Human–machine symbiosis</li>
+                <li>Real-time personalization</li>
+                <li>Context-aware services</li>
+                <li>Fully connected digital ecosystem</li>
+            </ul>
+
+            <h2>Core Technologies</h2>
+            <ul>
+                <li>Artificial Intelligence (AI) & Machine Learning</li>
+                <li>Internet of Things (IoT)</li>
+                <li>Augmented Reality (AR) & Virtual Reality (VR)</li>
+                <li>Big Data analytics</li>
+                <li>Ubiquitous computing (everywhere computing)</li>
+            </ul>
+
+            <h2>Examples</h2>
+            <ul>
+                <li>Smart assistants (advanced AI agents)</li>
+                <li>Self-driving systems and smart cities</li>
+                <li>Personalized AI web experiences</li>
+                <li>Connected smart homes (IoT ecosystems)</li>
+            </ul>
+
+            <div class="cta">
+                <p>💡 Web 4.0 = “The Web that thinks and acts for you”</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Reusable) ===== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Internet Terminology</p>
+            <p class="footer-links">
+                Built for learning • Web Tech • Networking
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>

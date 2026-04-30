@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* ===== BODY (Sticky Footer Setup) ===== */
+/* ===== BODY (Sticky Footer Layout) ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #eef5ff;
@@ -21,12 +21,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     background: #0d47a1;
     padding: 10px 20px;
+
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* Logo */
@@ -40,6 +44,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* helps if screen is small */
 }
 
 .navbar ul li {
@@ -49,23 +54,23 @@ body {
 /* Links */
 .navbar ul li a {
     display: block;
-    padding: 12px 15px;
+    padding: 12px 14px;
     color: #fff;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
+    transition: all 0.25s ease;
+    border-radius: 6px;
 }
 
-/* Hover */
+/* Hover effect */
 .navbar ul li a:hover {
     background: #1565c0;
-    border-radius: 5px;
+    transform: translateY(-1px);
 }
 
-/* Active */
+/* Active link */
 .navbar ul li a.active {
     background: #1976d2;
-    border-radius: 5px;
     font-weight: bold;
 }
 
@@ -73,67 +78,75 @@ body {
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 40px;
+    top: 42px;
     left: 0;
+
     background: #1565c0;
-    min-width: 160px;
+    min-width: 170px;
+
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
 /* Dropdown items */
 .dropdown-menu li a {
-    padding: 10px;
+    padding: 10px 12px;
     display: block;
+    border-radius: 0;
 }
 
-/* Show dropdown on hover */
+/* Hover dropdown */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
 /* ===== CONTENT ===== */
 .content {
-    margin-top: 80px;
+    margin-top: 90px; /* prevents header overlap */
     padding: 25px;
+
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 
-    flex: 1; /* 🔥 pushes footer to bottom */
+    flex: 1;
 }
 
-/* Sections */
+/* HERO SECTION */
 .hero {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .hero h1 {
     color: #0d47a1;
-    font-size: 32px;
+    font-size: 34px;
 }
 
 .intro {
     color: #555;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
-/* Info box */
+/* INFO BOX */
 .info {
     background: #ffffff;
-    padding: 20px;
+    padding: 22px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
 }
 
-/* CTA */
+/* CTA BOX */
 .cta {
-    margin-top: 15px;
-    padding: 10px;
+    margin-top: 18px;
+    padding: 12px;
+
     background: #e3f2fd;
     border-left: 5px solid #1976d2;
+
     border-radius: 6px;
 }
 
@@ -142,20 +155,34 @@ body {
     max-width: 100%;
     margin: 20px auto;
     display: block;
-    border-radius: 8px;
+
+    border-radius: 10px;
 }
 
 /* ===== HEADINGS ===== */
 h1, h2 {
     margin-bottom: 10px;
+    color: #0d47a1;
 }
 
-/* ===== FOOTER ===== */
+/* ===== LISTS ===== */
+ul {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* ===== FOOTER (Sticky Bottom) ===== */
 .main-footer {
     background: #0d47a1;
     color: #fff;
     text-align: center;
-    padding: 20px;
+
+    padding: 18px;
+    margin-top: auto; /* 🔥 ensures bottom stick behavior */
 }
 
 .footer-links {

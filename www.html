@@ -1,65 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Internet Terminology -     World Wide Web - Internet Terminology">
+    <meta name="description" content="Internet Terminology - World Wide Web">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Wide Web - Internet Terminology</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header / Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="www.html" class="active">World Wide Web</a></li>
-            <li><a href="tcpip.html">TCP/IP</a></li>
-            <li><a href="browsers.html">Web Browsers</a></li>
-            <li><a href="webserver.html">Web Servers</a></li>
-            <li><a href="urls.html">URL</a></li>
-            <li><a href="dns.html">DNS</a></li>
-            <li><a href="http.html">HTTP</a></li>
-            <li><a href="intranet.html">Intranet</a></li>
-            <li><a href="extranet.html">Extranet</a></li>
-            <li><a href="multitier.html">Multitier Architecture</a></li>
-            <li><a href="ftp.html">FTP</a></li>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="web1.0.html">Web 1.0</a></li>
-            <li><a href="web2.0.html">Web 2.0</a></li>
-            <li><a href="web3.0.html">Web 3.0</a></li>
-            <li><a href="web4.0.html">Web 4.0</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>World Wide Web (WWW)</h1>
-        <img src="images/www.jpg" alt="World Wide Web illustration">
-        <p>The <strong>World Wide Web (WWW)</strong> is a system of interlinked hypertext documents accessed via the Internet. It was invented by <strong>Sir Tim Berners-Lee</strong> in 1989 at CERN and became publicly available in 1991. The WWW allows users to access and share information through web pages connected by hyperlinks, using browsers as the main interface.</p>
-        <h2>Key Components</h2>
-        <ul>
-            <li><strong>Web Browsers:</strong> Software to access and display web pages (e.g., Chrome, Firefox, Safari).</li>
-            <li><strong>Web Servers:</strong> Computers that store and serve web content.</li>
-            <li><strong>Protocols:</strong> HTTP/HTTPS for communication, HTML/CSS/JavaScript for content and interactivity.</li>
-        </ul>
-        <h2>How It Works</h2>
-        <p>Users enter a URL in their browser, which sends a request to a web server. The server responds with the requested web page, which the browser renders for the user. Hyperlinks allow seamless navigation between pages and sites.</p>
-        <h2>Impact on Society</h2>
-        <ul>
-            <li>Revolutionized global communication and information sharing.</li>
-            <li>Enabled e-commerce, online education, social networking, and digital media.</li>
-            <li>Empowered individuals and organizations to publish and access content worldwide.</li>
-        </ul>
-        <h2>Evolution</h2>
-        <ul>
-            <li><strong>Web 1.0:</strong> Static, read-only web pages.</li>
-            <li><strong>Web 2.0:</strong> Interactive, user-generated content and social media.</li>
-            <li><strong>Web 3.0:</strong> Semantic web, decentralization, and AI integration.</li>
-            <li><strong>Web 4.0:</strong> Envisioned as a symbiotic web with advanced AI and IoT.</li>
-        </ul>
-        <h2>Fun Fact</h2>
-        <p>The first website ever created is still online: <a href="http://info.cern.ch" target="_blank">info.cern.ch</a></p>
-    </div>
-    <footer>
-        <p>&copy; 2026 Internet Terminology Website. All rights reserved.</p>
+
+    <!-- ===== HEADER (Reusable) ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🌐 NetTerms</h2>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="www.html" class="active">WWW</a></li>
+                <li><a href="tcpip.html">TCP/IP</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="webserver.html">Servers</a></li>
+                <li><a href="urls.html">URL</a></li>
+                <li><a href="dns.html">DNS</a></li>
+                <li><a href="http.html">HTTP</a></li>
+                <li><a href="intranet.html">Intranet</a></li>
+                <li><a href="extranet.html">Extranet</a></li>
+                <li><a href="multitier.html">Multitier</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="ftp.html">FTP</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="web1.0.html">Web1</a></li>
+                        <li><a href="web2.0.html">Web2</a></li>
+                        <li><a href="web3.0.html">Web3</a></li>
+                        <li><a href="web4.0.html">Web4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+        <section class="hero">
+            <h1>World Wide Web (WWW)</h1>
+            <p class="intro">
+                The foundation of modern Internet browsing and information sharing.
+            </p>
+        </section>
+
+        <section class="info">
+
+            <img src="images/www.jpg" alt="World Wide Web illustration">
+
+            <h2>What is the World Wide Web?</h2>
+            <p>
+                The World Wide Web is a system of interlinked hypertext documents accessed via the Internet.
+                It allows users to browse and share information using web browsers and hyperlinks.
+            </p>
+
+            <h2>Inventor</h2>
+            <p>
+                The WWW was invented by Sir Tim Berners-Lee in 1989 at CERN and became publicly available in 1991.
+            </p>
+
+            <h2>Key Components</h2>
+            <ul>
+                <li><strong>Web Browsers:</strong> Access and display web pages</li>
+                <li><strong>Web Servers:</strong> Store and deliver content</li>
+                <li><strong>Protocols:</strong> HTTP/HTTPS, HTML, CSS, JavaScript</li>
+            </ul>
+
+            <h2>How It Works</h2>
+            <p>
+                A browser sends a request to a web server using a URL.
+                The server responds with a web page, which is then displayed in the browser.
+            </p>
+
+            <h2>Impact on Society</h2>
+            <ul>
+                <li>Global communication and instant information access</li>
+                <li>Enabled e-commerce and online services</li>
+                <li>Revolutionized education and entertainment</li>
+            </ul>
+
+            <h2>Evolution of the Web</h2>
+            <ul>
+                <li><strong>Web 1.0:</strong> Static read-only pages</li>
+                <li><strong>Web 2.0:</strong> Interactive social web</li>
+                <li><strong>Web 3.0:</strong> AI + decentralized systems</li>
+                <li><strong>Web 4.0:</strong> Intelligent and predictive web</li>
+            </ul>
+
+            <div class="cta">
+                <p>💡 The WWW is the system that made the Internet usable for everyone.</p>
+            </div>
+
+            <h2>Fun Fact</h2>
+            <p>
+                The first website ever created is still online:
+                <a href="http://info.cern.ch" target="_blank">info.cern.ch</a>
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Reusable) ===== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Internet Terminology</p>
+            <p class="footer-links">
+                Built for learning • Web Tech • Networking
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>

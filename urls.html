@@ -1,45 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Internet Terminology -     URL - Internet Terminology">
+    <meta name="description" content="Internet Terminology - URL">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL - Internet Terminology</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="www.html">World Wide Web</a></li>
-            <li><a href="tcpip.html">TCP/IP</a></li>
-            <li><a href="browsers.html">Web Browsers</a></li>
-            <li><a href="webserver.html">Web Servers</a></li>
-            <li><a href="urls.html" class="active">URL</a></li>
-            <li><a href="dns.html">DNS</a></li>
-            <li><a href="http.html">HTTP</a></li>
-            <li><a href="intranet.html">Intranet</a></li>
-            <li><a href="extranet.html">Extranet</a></li>
-            <li><a href="multitier.html">Multitier Architecture</a></li>
-            <li><a href="ftp.html">FTP</a></li>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="web1.0.html">Web 1.0</a></li>
-            <li><a href="web2.0.html">Web 2.0</a></li>
-            <li><a href="web3.0.html">Web 3.0</a></li>
-            <li><a href="web4.0.html">Web 4.0</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>Uniform Resource Locator (URL)</h1>
-        <img src="images/urls.webp" alt="URL structure illustration">
-        <p>A Uniform Resource Locator (URL) is the address used to access resources on the Internet. It specifies the location of a resource and the mechanism for retrieving it. A typical URL consists of a protocol (e.g., http, https), a domain name (or IP address), and a path to the resource.</p>
-        <p>For example, in the URL <code>https://www.example.com/path/to/page.html</code>:</p>
-        <ul>
-            <li><code>https</code> is the protocol</li>
-            <li><code>www.example.com</code> is the domain name</li>
-            <li><code>/path/to/page.html</code> is the path to the resource</li>
-        </ul>
-        <p>URLs are fundamental to web navigation and are used by browsers to locate and display web pages.</p>
-    </div>
+
+    <!-- ===== HEADER (Reusable) ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🌐 NetTerms</h2>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="www.html">WWW</a></li>
+                <li><a href="tcpip.html">TCP/IP</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="webserver.html">Servers</a></li>
+                <li><a href="urls.html" class="active">URL</a></li>
+                <li><a href="dns.html">DNS</a></li>
+                <li><a href="http.html">HTTP</a></li>
+                <li><a href="intranet.html">Intranet</a></li>
+                <li><a href="extranet.html">Extranet</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="multitier.html">Multitier</a></li>
+                        <li><a href="ftp.html">FTP</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="web1.0.html">Web1</a></li>
+                        <li><a href="web2.0.html">Web2</a></li>
+                        <li><a href="web3.0.html">Web3</a></li>
+                        <li><a href="web4.0.html">Web4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+        <section class="hero">
+            <h1>Uniform Resource Locator (URL)</h1>
+            <p class="intro">The address system used to locate resources on the Internet.</p>
+        </section>
+
+        <section class="info">
+
+            <img src="images/urls.webp" alt="URL structure illustration">
+
+            <h2>What is a URL?</h2>
+            <p>
+                A Uniform Resource Locator (URL) is the address used to access resources on the Internet.
+                It tells the browser where a resource is located and how to retrieve it.
+            </p>
+
+            <h2>Structure of a URL</h2>
+            <p>Example:</p>
+            <code>https://www.example.com/path/to/page.html</code>
+
+            <ul>
+                <li><strong>https:</strong> Protocol (communication method)</li>
+                <li><strong>www.example.com:</strong> Domain name</li>
+                <li><strong>/path/to/page.html:</strong> Resource location (path)</li>
+            </ul>
+
+            <h2>Types of URLs</h2>
+            <ul>
+                <li><strong>Absolute URL:</strong> Full web address including domain</li>
+                <li><strong>Relative URL:</strong> Path relative to current page</li>
+            </ul>
+
+            <h2>Importance of URLs</h2>
+            <ul>
+                <li>Enable navigation on the web</li>
+                <li>Identify unique resources</li>
+                <li>Used by browsers to load web pages</li>
+            </ul>
+
+            <div class="cta">
+                <p>🔗 URL = The “address system” of the Internet</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Reusable) ===== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Internet Terminology</p>
+            <p class="footer-links">
+                Built for learning • Web Tech • Networking
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>
