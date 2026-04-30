@@ -12,11 +12,14 @@
 
     <!-- ===== HEADER (Reusable) ===== -->
     <header class="main-header">
-        <div class="logo">
-            <h2>🌐 NetTerms</h2>
-        </div>
+    <div class="logo">
+        <h2>🌐 NetTerms</h2>
+    </div>
 
-        <nav class="navbar">
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="www.html">WWW</a></li>
@@ -88,12 +91,85 @@
             </ul>
 
             <div class="cta">
-                <p>🔗 URL = The “address system” of the Internet</p>
+                <p>🔗 URL = The "address system" of the Internet</p>
             </div>
 
         </section>
 
-    </main>
+        <section class="info">
+
+            <img src="images/urls.webp" alt="URL component breakdown">
+
+            <h2>Complete URL Anatomy</h2>
+            <p class="url-breakdown">
+                <code>https://user:pass@www.example.com:8080/path/to/page.html?query=value#fragment</code>
+            </p>
+            <ul>
+                <li><strong>https:</strong> Protocol/Scheme (http, https, ftp, mailto)</li>
+                <li><strong>user:pass@:</strong> Optional authentication credentials</li>
+                <li><strong>www.example.com:</strong> Domain name or IP address</li>
+                <li><strong>:8080:</strong> Port number (optional, default 80 for HTTP, 443 for HTTPS)</li>
+                <li><strong>/path/to/page.html:</strong> Path to the resource</li>
+                <li><strong>?query=value:</strong> Query string for passing parameters</li>
+                <li><strong>#fragment:</strong> Anchor to specific section within the page</li>
+            </ul>
+
+            <h2>URL Encoding (Percent Encoding)</h2>
+            <p>Special characters must be encoded to be URL-safe:</p>
+            <ul>
+                <li>Space becomes <code>%20</code> or <code>+</code></li>
+                <li><code>?</code> becomes <code>%3F</code></li>
+                <li><code>=</code> becomes <code>%3D</code></li>
+                <li><code>&amp;</code> becomes <code>%26</code></li>
+                <li><code>#</code> becomes <code>%23</code></li>
+                <li>Example: <code>search?q=hello world&amp;page=1</code> becomes
+                    <code>search?q=hello%20world%26page%3D1</code></li>
+            </ul>
+
+            <h2>URL Shorteners</h2>
+            <ul>
+                <li><strong>Bitly:</strong> Custom short URLs with analytics</li>
+                <li><strong>TinyURL:</strong> Simple URL shortening since 2002</li>
+                <li><strong>Google URL Shortener:</strong> Discontinued (was goo.gl)</li>
+                <li><strong>Twitter t.co:</strong> Automatic shortening for tweets</li>
+                <li>Use cases: Social media, SMS, QR codes, tracking links</li>
+            </ul>
+
+            <h2>Best Practices for URLs</h2>
+            <ul>
+                <li>Keep them short and descriptive</li>
+                <li>Use hyphens (-) not underscores (_) to separate words</li>
+                <li>Avoid special characters and spaces</li>
+                <li>Use lowercase letters (URLs are case-sensitive)</li>
+                <li>Include relevant keywords for SEO</li>
+                <li>Use canonical URLs to avoid duplicate content</li>
+                <li>Implement proper 301 redirects when changing URLs</li>
+                <li>Use HTTPS for security and SEO benefits</li>
+            </ul>
+
+            <h2>Interesting URL Facts</h2>
+            <ul>
+                <li>The longest URL ever recorded was over 2,000 characters</li>
+                <li>URLs can contain emojis (encoded as UTF-8)</li>
+                <li>Internationalized Domain Names (IDN) support non-ASCII characters</li>
+                <li>Punycode converts Unicode to ASCII (xn-- prefix in URLs)</li>
+                <li>Some URLs use "slug" - human-readable path components</li>
+            </ul>
+
+            <h2>URL Security Considerations</h2>
+            <ul>
+                <li><strong>Phishing:</strong> Fake URLs mimicking legitimate sites (amaz0n.com)</li>
+                <li><strong>Open Redirects:</strong> Malicious redirects through trusted domains</li>
+                <li><strong>URL Obfuscation:</strong> Hiding true destination with redirects</li>
+                <li><strong>Always verify:</strong> Check domain spelling and use HTTPS</li>
+                <li><strong>Hover before clicking:</strong> Preview URL destination</li>
+            </ul>
+
+            <div class="cta">
+                <p>🌍 Billions of URLs are accessed every second across the global internet infrastructure.</p>
+            </div>
+
+        </section>
 
     <!-- ===== FOOTER (Reusable) ===== -->
     <footer class="main-footer">

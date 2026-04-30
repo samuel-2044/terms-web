@@ -12,11 +12,14 @@
 
     <!-- ===== HEADER (Reusable) ===== -->
     <header class="main-header">
-        <div class="logo">
-            <h2>🌐 NetTerms</h2>
-        </div>
+    <div class="logo">
+        <h2>🌐 NetTerms</h2>
+    </div>
 
-        <nav class="navbar">
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="www.html">WWW</a></li>
@@ -106,7 +109,105 @@
 
         </section>
 
-    </main>
+        <section class="info">
+
+            <img src="images/ftp.png" alt="FTP client-server architecture">
+
+            <h2>FTP Connection Modes</h2>
+            <p>FTP uses different modes to establish data connections:</p>
+            <ul>
+                <li><strong>Active Mode:</strong> Server initiates data connection to client's port 20
+                    <ul>
+                        <li>Client sends PORT command with its IP and port</li>
+                        <li>Server connects from port 20 to specified client port</li>
+                        <li>Can fail with firewalls/NAT</li>
+                    </ul>
+                </li>
+                <li><strong>Passive Mode:</strong> Client initiates both control and data connections
+                    <ul>
+                        <li>Client sends PASV command</li>
+                        <li>Server responds with IP and random port number</li>
+                        <li>Client connects to that port for data transfer</li>
+                        <li>Better for firewalls and NAT</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Common FTP Commands</h2>
+            <ul>
+                <li><strong>USER:</strong> Specify username for authentication</li>
+                <li><strong>PASS:</strong> Specify password</li>
+                <li><strong>LIST:</strong> List files in current directory</li>
+                <li><strong>RETR:</strong> Retrieve/download a file</li>
+                <li><strong>STOR:</strong> Store/upload a file</li>
+                <li><strong>DELE:</strong> Delete a file</li>
+                <li><strong>MKD:</strong> Create a directory</li>
+                <li><strong>PWD:</strong> Print working directory</li>
+                <li><strong>QUIT:</strong> Close connection</li>
+            </ul>
+
+            <h2>FTP Response Codes</h2>
+            <ul>
+                <li><strong>1xx:</strong> Positive preliminary reply</li>
+                <li><strong>2xx:</strong> Positive completion (200 Command OK, 226 Transfer Complete)</li>
+                <li><strong>3xx:</strong> Positive intermediate (331 Username OK, need password)</li>
+                <li><strong>4xx:</strong> Transient negative (421 Service unavailable, 451 Local error)</li>
+                <li><strong>5xx:</strong> Permanent negative (550 File not found, 530 Not logged in)</li>
+            </ul>
+
+            <h2>SFTP vs FTPS Comparison</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>SFTP</th>
+                    <th>FTPS</th>
+                </tr>
+                <tr>
+                    <td>Protocol Base</td>
+                    <td>SSH (Secure Shell)</td>
+                    <td>FTP with SSL/TLS</td>
+                </tr>
+                <tr>
+                    <td>Port</td>
+                    <td>22</td>
+                    <td>990 (implicit), 21 (explicit)</td>
+                </tr>
+                <td>Firewall Friendly</td>
+                <td>Yes - single port</td>
+                <td>No - requires multiple ports</td>
+                </tr>
+                <tr>
+                </tr>
+                    <td>Platform Support</td>
+                    <td>Universal via SSH</td>
+                    <td>Requires SSL certificate</td>
+                </tr>
+                <tr>
+                    <td>Directory Listings</td>
+                    <td>Standardized binary format</td>
+                    <td>Human-readable text</td>
+                </tr>
+                <tr>
+                    <td>Command Execution</td>
+                    <td>Extends SSH capabilities</td>
+                    <td>FTP commands only</td>
+                </tr>
+            </table>
+
+            <h2>Modern FTP Alternatives</h2>
+            <ul>
+                <li><strong>Aspera:</strong> High-speed file transfer (petabytes/day)</li>
+                <li><strong>Signiant:</strong> Media file transfer acceleration</li>
+                <li><strong>WeTransfer:</strong> Consumer-friendly file sharing</li>
+                <li><strong>Cloud Storage:</strong> S3, Google Cloud Storage with presigned URLs</li>
+                <li><strong>WebDAV:</strong> Web-based distributed authoring</li>
+            </ul>
+
+            <div class="cta">
+                <p>📤 Over 2 billion files are transferred via FTP protocols daily worldwide.</p>
+            </div>
+
+        </section>
 
     <!-- ===== FOOTER (Reusable) ===== -->
     <footer class="main-footer">

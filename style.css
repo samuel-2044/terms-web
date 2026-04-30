@@ -1,3 +1,81 @@
+/* ===== INDEX PAGE CUSTOM SECTIONS ===== */
+.overview, .categories, .objectives {
+    background: #fff;
+    margin: 30px 0;
+    padding: 24px 28px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(13, 71, 161, 0.07);
+}
+
+.overview h2, .categories h2, .objectives h2 {
+    color: #1976d2;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+}
+
+.overview ul, .objectives ul {
+    margin-left: 18px;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: disc inside;
+}
+
+.overview ul li, .objectives ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.categories .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.categories .category {
+    flex: 1 1 180px;
+    background: #e3f2fd;
+    border-radius: 8px;
+    padding: 16px 14px;
+    min-width: 160px;
+    box-shadow: 0 1px 4px rgba(25, 118, 210, 0.07);
+}
+
+.categories .category h3 {
+    color: #0d47a1;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.categories .category ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.categories .category ul li {
+    margin-bottom: 6px;
+    padding-left: 0.5em;
+    position: relative;
+}
+
+.categories .category ul li:before {
+    content: "• ";
+    color: #1976d2;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 700px) {
+    .categories .category-list {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .overview, .categories, .objectives {
+        padding: 16px 8px;
+    }
+}
 /* ===== RESET ===== */
 * {
     margin: 0;

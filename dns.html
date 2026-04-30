@@ -12,11 +12,14 @@
 
     <!-- ===== HEADER (Reusable) ===== -->
     <header class="main-header">
-        <div class="logo">
-            <h2>🌐 NetTerms</h2>
-        </div>
+    <div class="logo">
+        <h2>🌐 NetTerms</h2>
+    </div>
 
-        <nav class="navbar">
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="www.html">WWW</a></li>
@@ -86,7 +89,48 @@
 
         </section>
 
-    </main>
+        <section class="info">
+
+            <img src="images/dns-servers.jpg" alt="DNS query resolution steps">
+
+            <h2>DNS Resolution Process</h2>
+            <p>The journey from domain name to IP address involves multiple server types:</p>
+            <ul>
+                <li><strong>DNS Recursor:</strong> Receives the query from the client device</li>
+                <li><strong>Root Nameserver:</strong> Points to the appropriate TLD server</li>
+                <li><strong>TLD Nameserver:</strong> Hosts the last portion of the hostname (.com, .org)</li>
+                <li><strong>Authoritative Nameserver:</strong> Returns the final IP address</li>
+            </ul>
+
+            <h2>DNS Record Types</h2>
+            <ul>
+                <li><strong>A Record:</strong> Maps domain to IPv4 address</li>
+                <li><strong>AAAA Record:</strong> Maps domain to IPv6 address</li>
+                <li><strong>CNAME:</strong> Aliases one domain to another</li>
+                <li><strong>MX Record:</strong> Specifies mail servers for email</li>
+                <li><strong>TXT Record:</strong> Stores text information (SPF, DKIM)</li>
+            </ul>
+
+            <h2>Common DNS Providers</h2>
+            <ul>
+                <li>Google Public DNS (8.8.8.8, 8.8.4.4)</li>
+                <li>Cloudflare DNS (1.1.1.1, 1.0.0.1)</li>
+                <li>OpenDNS</li>
+                <li>ISP-provided DNS servers</li>
+            </ul>
+
+            <h2>DNS Security</h2>
+            <ul>
+                <li><strong>DNSSEC:</strong> Protects against DNS spoofing and cache poisoning</li>
+                <li><strong>DNS over HTTPS (DoH):</strong> Encrypts DNS queries for privacy</li>
+                <li><strong>DNS over TLS (DoT):</strong> Another encrypted DNS protocol</li>
+            </ul>
+
+            <div class="cta">
+                <p>💡 Without DNS, you'd need to memorize IP addresses for every website you visit.</p>
+            </div>
+
+        </section>
 
     <!-- ===== FOOTER (Reusable) ===== -->
     <footer class="main-footer">

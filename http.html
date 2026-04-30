@@ -12,11 +12,14 @@
 
     <!-- ===== HEADER (Reusable) ===== -->
     <header class="main-header">
-        <div class="logo">
-            <h2>🌐 NetTerms</h2>
-        </div>
+    <div class="logo">
+        <h2>🌐 NetTerms</h2>
+    </div>
 
-        <nav class="navbar">
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="www.html">WWW</a></li>
@@ -91,7 +94,50 @@
 
         </section>
 
-    </main>
+        <section class="info">
+
+            <img src="images/http.png" alt="HTTP request-response cycle">
+
+            <h2>HTTP Request-Response Cycle</h2>
+            <p>Every HTTP interaction follows a request-response pattern:</p>
+            <ol>
+                <li><strong>Client Request:</strong> Browser sends an HTTP request with method, URL, headers</li>
+                <li><strong>Server Processing:</strong> Web server receives and processes the request</li>
+                <li><strong>Server Response:</strong> Server sends back HTTP status code and content</li>
+                <li><strong>Client Rendering:</strong> Browser interprets and displays the response</li>
+            </ol>
+
+            <h2>HTTP Status Codes</h2>
+            <ul>
+                <li><strong>1xx (Informational):</strong> Request received, continuing process</li>
+                <li><strong>2xx (Success):</strong> Request succeeded (200 OK, 201 Created)</li>
+                <li><strong>3xx (Redirection):</strong> Further action needed (301 Moved, 302 Found)</li>
+                <li><strong>4xx (Client Error):</strong> Bad request (400), Not Found (404), Unauthorized (401)</li>
+                <li><strong>5xx (Server Error):</strong> Server failed (500 Internal Error, 503 Service Unavailable)</li>
+            </ul>
+
+            <h2>HTTP Headers</h2>
+            <p>Headers provide metadata about the request or response:</p>
+            <ul>
+                <li><strong>Content-Type:</strong> Format of data (text/html, application/json)</li>
+                <li><strong>Content-Length:</strong> Size of the body in bytes</li>
+                <li><strong>User-Agent:</strong> Client software making the request</li>
+                <li><strong>Cookie:</strong> Stores small pieces of data for session management</li>
+                <li><strong>Authorization:</strong> Credentials for authenticated requests</li>
+                <li><strong>Cache-Control:</strong> Directives for caching mechanisms</li>
+            </ul>
+
+            <h2>HTTP/2 and HTTP/3</h2>
+            <ul>
+                <li><strong>HTTP/2:</strong> Multiplexing, header compression, server push</li>
+                <li><strong>HTTP/3:</strong> Uses QUIC protocol over UDP for even faster performance</li>
+            </ul>
+
+            <div class="cta">
+                <p>🌐 Over 1 billion websites rely on HTTP/HTTPS to serve pages to users worldwide.</p>
+            </div>
+
+        </section>
 
     <!-- ===== FOOTER (Reusable) ===== -->
     <footer class="main-footer">

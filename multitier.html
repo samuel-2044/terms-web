@@ -12,11 +12,14 @@
 
     <!-- ===== HEADER (Reusable) ===== -->
     <header class="main-header">
-        <div class="logo">
-            <h2>🌐 NetTerms</h2>
-        </div>
+    <div class="logo">
+        <h2>🌐 NetTerms</h2>
+    </div>
 
-        <nav class="navbar">
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="www.html">WWW</a></li>
@@ -97,7 +100,81 @@
 
         </section>
 
-    </main>
+        <section class="info">
+
+            <img src="images/multitier.webp" alt="Three-tier architecture diagram">
+
+            <h2>Detailed Tier Breakdown</h2>
+            <div class="multi-tier-details">
+                <h3>Presentation Tier (Layer 1)</h3>
+                <p>The user-facing layer responsible for displaying information and collecting user input:</p>
+                <ul>
+                    <li><strong>Technologies:</strong> HTML, CSS, JavaScript, React, Angular, Vue.js</li>
+                    <li><strong>Responsibilities:</strong> User interface, input validation, client-side logic</li>
+                    <li><strong>Execution:</strong> Runs on client devices (browsers, mobile apps)</li>
+                    <li><strong>Communication:</strong> Sends requests via HTTP/HTTPS protocol</li>
+                </ul>
+
+                <h3>Application Tier (Layer 2)</h3>
+                <p>The processing layer that handles business logic and data manipulation:</p>
+                <ul>
+                    <li><strong>Technologies:</strong> Node.js, Java Spring, Python Django, .NET, PHP</li>
+                    <li><strong>Responsibilities:</strong> Business rules, calculations, authentication, authorization</li>
+                    <li><strong>Execution:</strong> Runs on application servers</li>
+                    <li><strong>Communication:</strong> Coordinates between presentation and data tiers</li>
+                </ul>
+
+                <h3>Data Tier (Layer 3)</h3>
+                <p>The storage layer that manages persistent data:</p>
+                <ul>
+                    <li><strong>Technologies:</strong> MySQL, PostgreSQL, MongoDB, Redis, Oracle</li>
+                    <li><strong>Responsibilities:</strong> Data storage, retrieval, indexing, backup</li>
+                    <li><strong>Execution:</strong> Runs on database servers</li>
+                    <li><strong>Communication:</strong> Provides data via SQL or NoSQL queries</li>
+                </ul>
+            </div>
+
+            <h2>Additional Architecture Patterns</h2>
+            <ul>
+                <li><strong>Two-Tier (Client-Server):</strong> Direct client-to-database connection, simpler but less scalable</li>
+                <li><strong>N-Tier:</strong> More than three layers, with additional service layers or middleware</li>
+                <li><strong>Microservices:</strong> Decomposes application tier into small, independent services</li>
+                <li><strong>Service-Oriented Architecture (SOA):</strong> Services communicate over network protocols</li>
+            </ul>
+
+            <h2>Advantages of Multitier Architecture</h2>
+            <ul>
+                <li><strong>Modularity:</strong> Each tier can be developed and tested independently</li>
+                <li><strong>Scalability:</strong> Scale tiers individually based on demand (e.g., add more app servers)</li>
+                <li><strong>Maintainability:</strong> Changes in one tier don't necessarily affect others</li>
+                <li><strong>Reusability:</strong> Services can be reused across different applications</li>
+                <li><strong>Security:</strong> Data tier is isolated from direct internet access</li>
+                <li><strong>Performance:</strong> Caching layers can be added between tiers</li>
+                <li><strong>Technology Flexibility:</strong> Different technologies can be used per tier</li>
+            </ul>
+
+            <h2>Real-World Examples</h2>
+            <ul>
+                <li><strong>E-commerce (Amazon):</strong> Web frontend → Order processing → Product database</li>
+                <li><strong>Banking Systems:</strong> ATM interface → Transaction processor → Account database</li>
+                <li><strong>Social Media (Facebook):</strong> React app → News feed service → User data store</li>
+                <li><strong>Online Gaming:</strong> Game client → Matchmaking server → Player statistics DB</li>
+            </ul>
+
+            <h2>Common Pitfalls</h2>
+            <ul>
+                <li><strong>Network Latency:</strong> Multiple hops between tiers can add delays</li>
+                <li><strong>Complexity:</strong> More components to deploy and maintain</li>
+                <li><strong>Debugging:</strong> Tracing issues across tiers can be challenging</li>
+                <li><strong>Over-Engineering:</strong> Simple apps may not need full n-tier architecture</li>
+                <li><strong>Data Consistency:</strong> Maintaining sync across distributed tiers</li>
+            </ul>
+
+            <div class="cta">
+                <p>🏗️ Fortune 500 companies typically use 5-7 tier architectures for their critical systems.</p>
+            </div>
+
+        </section>
 
     <!-- ===== FOOTER (Reusable) ===== -->
     <footer class="main-footer">

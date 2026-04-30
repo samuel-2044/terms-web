@@ -12,11 +12,14 @@
 
     <!-- ===== HEADER (Reusable) ===== -->
     <header class="main-header">
-        <div class="logo">
-            <h2>🌐 NetTerms</h2>
-        </div>
+    <div class="logo">
+        <h2>🌐 NetTerms</h2>
+    </div>
 
-        <nav class="navbar">
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <nav class="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="www.html">WWW</a></li>
@@ -97,7 +100,109 @@
 
         </section>
 
-    </main>
+        <section class="info">
+
+            <img src="images/html.jpeg" alt="HTML document structure">
+
+            <h2>HTML Document Structure</h2>
+            <p>A basic HTML5 document follows this structure:</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <h2>Semantic HTML Elements</h2>
+            <p>HTML5 introduced semantic elements for better structure and SEO:</p>
+            <ul>
+                <li><code>&lt;header&gt;</code> - Introductory content or navigational links</li>
+                <li><code>&lt;nav&gt;</code> - Navigation section</li>
+                <li><code>&lt;main&gt;</code> - Main content of the document</li>
+                <li><code>&lt;article&gt;</code> - Self-contained composition (blog post, news)</li>
+                <li><code>&lt;section&gt;</code> - Thematic grouping of content</li>
+                <li><code>&lt;aside&gt;</code> - Sidebar or tangential content</li>
+                <li><code>&lt;footer&gt;</code> - Footer information (copyright, links)</li>
+                <li><code>&lt;figure&gt;</code> - Self-contained media content</li>
+                <li><code>&lt;figcaption&gt;</code> - Caption for figure element</li>
+            </ul>
+
+            <h2>Essential HTML Attributes</h2>
+            <ul>
+                <li><strong>id:</strong> Unique identifier for an element</li>
+                <li><strong>class:</strong> One or more class names for CSS/JavaScript</li>
+                <li><strong>src:</strong> Source file for images, scripts, iframes</li>
+                <li><strong>href:</strong> Destination for links and references</li>
+                <li><strong>alt:</strong> Alternative text for images (accessibility)</li>
+                <li><strong>title:</strong> Advisory information on hover</li>
+                <li><strong>style:</strong> Inline CSS styling</li>
+                <li><strong>data-*:</strong> Custom data attributes for JavaScript</li>
+            </ul>
+
+            <h2>Common HTML Elements</h2>
+            <table>
+                <tr>
+                    <th>Element</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>&lt;p&gt;</td>
+                    <td>Paragraph</td>
+                    <td>&lt;p&gt;Hello World!&lt;/p&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;a&gt;</td>
+                    <td>Anchor/Link</td>
+                    <td>&lt;a href="page.html"&gt;Click here&lt;/a&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;img&gt;</td>
+                    <td>Image</td>
+                    <td>&lt;img src="pic.jpg" alt="picture"&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;ul&gt;/&lt;ol&gt;</td>
+                    <td>Unordered/Ordered list</td>
+                    <td>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;div&gt;</td>
+                    <td>Division/container</td>
+                    <td>&lt;div class="box"&gt;Content&lt;/div&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;form&gt;</td>
+                    <td>Input form</td>
+                    <td>&lt;form&gt;&lt;input type="text"&gt;&lt;/form&gt;</td>
+                </tr>
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>Data table</td>
+                    <td>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</td>
+                </tr>
+            </table>
+
+            <h2>HTML Validation</h2>
+            <p>Always validate your HTML to ensure compatibility and accessibility:</p>
+            <ul>
+                <li>Use W3C Validator: https://validator.w3.org/</li>
+                <li>Test across multiple browsers (Chrome, Firefox, Safari, Edge)</li>
+                <li>Check accessibility with screen readers</li>
+                <li>Ensure mobile responsiveness</li>
+                <li>Follow WCAG 2.1 guidelines for accessibility</li>
+            </ul>
+
+            <div class="cta">
+                <p>📚 There are over 100 HTML elements, but mastering 20 core elements covers 95% of use cases.</p>
+            </div>
+
+        </section>
 
     <!-- ===== FOOTER (Reusable) ===== -->
     <footer class="main-footer">
