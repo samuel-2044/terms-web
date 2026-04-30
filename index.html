@@ -3,99 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Internet Terminology website - Learn about World Wide Web, TCP/IP, Web Browsers, Web Servers, URL, DNS, HTTP, Intranet, Extranet, Multitier Architecture, FTP, HTML, Web 1.0, Web 2.0, Web 3.0, and Web 4.0">
+    <meta name="description" content="Internet Terminology website - Learn about networking and web concepts">
     <title>Internet Terminology - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ===== HEADER (Reusable) ===== -->
-    <header class="main-header">
-        <div class="logo">
-            <h2>🌐 NetTerms</h2>
+<!-- ===== HEADER ===== -->
+<header class="main-header">
+
+    <div class="logo">
+        <h2>🌐 NetTerms</h2>
+    </div>
+
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger">☰</button>
+
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="www.html">WWW</a></li>
+            <li><a href="tcpip.html">TCP/IP</a></li>
+            <li><a href="browsers.html">Browsers</a></li>
+            <li><a href="webserver.html">Servers</a></li>
+            <li><a href="urls.html">URL</a></li>
+            <li><a href="dns.html">DNS</a></li>
+            <li><a href="http.html">HTTP</a></li>
+            <li><a href="intranet.html">Intranet</a></li>
+            <li><a href="extranet.html">Extranet</a></li>
+
+            <li class="dropdown">
+                <a href="#">More ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="multitier.html">Multitier</a></li>
+                    <li><a href="ftp.html">FTP</a></li>
+                    <li><a href="html.html">HTML</a></li>
+                    <li><a href="web1.0.html">Web1</a></li>
+                    <li><a href="web2.0.html">Web2</a></li>
+                    <li><a href="web3.0.html">Web3</a></li>
+                    <li><a href="web4.0.html">Web4</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+<!-- ===== CONTENT ===== -->
+<main class="content">
+
+    <section class="hero">
+        <h1>Internet Terminology</h1>
+        <p class="intro">Learn networking & web technologies in a simple structured way.</p>
+    </section>
+
+    <section class="info">
+        <p>This site explains core Internet concepts like TCP/IP, HTTP, DNS, and Web evolution.</p>
+        <div class="cta">
+            <p>👉 Use the menu to explore topics.</p>
         </div>
+    </section>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="www.html">WWW</a></li>
-                <li><a href="tcpip.html">TCP/IP</a></li>
-                <li><a href="browsers.html">Browsers</a></li>
-                <li><a href="webserver.html">Servers</a></li>
-                <li><a href="urls.html">URL</a></li>
-                <li><a href="dns.html">DNS</a></li>
-                <li><a href="http.html">HTTP</a></li>
-                <li><a href="intranet.html">Intranet</a></li>
-                <li><a href="extranet.html">Extranet</a></li>
+</main>
 
-                <!-- DROPDOWN -->
-                <li class="dropdown">
-                    <a href="#">More ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="multitier.html">Multitier</a></li>
-                        <li><a href="ftp.html">FTP</a></li>
-                        <li><a href="html.html">HTML</a></li>
-                        <li><a href="web1.0.html">Web1</a></li>
-                        <li><a href="web2.0.html">Web2</a></li>
-                        <li><a href="web3.0.html">Web3</a></li>
-                        <li><a href="web4.0.html">Web4</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<!-- ===== FOOTER ===== -->
+<footer class="main-footer">
+    <p>&copy; 2026 Internet Terminology</p>
+</footer>
 
-    <!-- ===== MAIN CONTENT ===== -->
-    <main class="content">
-
-        <section class="hero">
-            <h1>Internet Terminology Guide</h1>
-            <p class="intro">
-                A structured learning platform for understanding how the Internet and Web technologies work.
-            </p>
-        </section>
-
-        <section class="info">
-
-            <h2>Welcome</h2>
-            <p>
-                This website is designed to help you understand key Internet concepts such as
-                networking protocols, web architecture, and the evolution of the World Wide Web.
-            </p>
-
-            <h2>What You Will Learn</h2>
-            <ul>
-                <li>How the Internet works (TCP/IP, DNS, HTTP)</li>
-                <li>Web technologies (HTML, browsers, servers)</li>
-                <li>Network types (Intranet, Extranet)</li>
-                <li>Evolution of the Web (Web 1.0 to Web 4.0)</li>
-                <li>File transfer and system architecture</li>
-            </ul>
-
-            <h2>How to Use This Site</h2>
-            <p>
-                Use the navigation bar at the top to explore each topic. Every section contains
-                clear explanations, examples, and visuals to help you learn faster.
-            </p>
-
-            <div class="cta">
-                <p>🚀 Start by selecting any topic from the navigation menu above.</p>
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- ===== FOOTER (Reusable) ===== -->
-    <footer class="main-footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Internet Terminology</p>
-            <p class="footer-links">
-                Built for learning • Web Tech • Networking
-            </p>
-        </div>
-    </footer>
+<script src="main.js"></script>
 
 </body>
 </html>

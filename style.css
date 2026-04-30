@@ -1,13 +1,13 @@
-/* ===== GLOBAL RESET ===== */
+/* ===== RESET ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===== BODY (Sticky Footer Layout) ===== */
+/* ===== BODY ===== */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     background: #eef5ff;
     color: #333;
 
@@ -18,175 +18,154 @@ body {
 
 /* ===== HEADER ===== */
 .main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     background: #0d47a1;
     padding: 10px 20px;
-
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
-/* Logo */
+/* LOGO */
 .logo h2 {
-    color: #fff;
-    font-size: 20px;
+    color: white;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== HAMBURGER ===== */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===== NAV ===== */
 .navbar ul {
-    list-style: none;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap; /* helps if screen is small */
+    list-style: none;
 }
 
-.navbar ul li {
-    position: relative;
-}
-
-/* Links */
 .navbar ul li a {
     display: block;
     padding: 12px 14px;
-    color: #fff;
+    color: white;
     text-decoration: none;
-    font-size: 14px;
-    transition: all 0.25s ease;
     border-radius: 6px;
+    transition: 0.2s;
 }
 
-/* Hover effect */
 .navbar ul li a:hover {
     background: #1565c0;
-    transform: translateY(-1px);
 }
 
-/* Active link */
 .navbar ul li a.active {
     background: #1976d2;
-    font-weight: bold;
 }
 
 /* ===== DROPDOWN ===== */
 .dropdown-menu {
     display: none;
     position: absolute;
-    top: 42px;
-    left: 0;
-
     background: #1565c0;
-    min-width: 170px;
-
+    min-width: 160px;
     border-radius: 8px;
-    overflow: hidden;
-
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
 }
 
-/* Dropdown items */
-.dropdown-menu li a {
-    padding: 10px 12px;
-    display: block;
-    border-radius: 0;
-}
-
-/* Hover dropdown */
 .dropdown:hover .dropdown-menu {
     display: block;
 }
 
+.dropdown-menu li a {
+    padding: 10px;
+}
+
 /* ===== CONTENT ===== */
 .content {
-    margin-top: 90px; /* prevents header overlap */
+    margin-top: 90px;
     padding: 25px;
-
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-
     flex: 1;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
     color: #0d47a1;
-    font-size: 34px;
 }
 
-.intro {
-    color: #555;
-    margin-top: 8px;
-}
-
-/* INFO BOX */
+/* INFO */
 .info {
-    background: #ffffff;
-    padding: 22px;
-    border-radius: 12px;
-
-    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-}
-
-/* CTA BOX */
-.cta {
-    margin-top: 18px;
-    padding: 12px;
-
-    background: #e3f2fd;
-    border-left: 5px solid #1976d2;
-
-    border-radius: 6px;
-}
-
-/* ===== IMAGES ===== */
-.content img {
-    max-width: 100%;
-    margin: 20px auto;
-    display: block;
-
+    background: white;
+    padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* ===== HEADINGS ===== */
-h1, h2 {
-    margin-bottom: 10px;
-    color: #0d47a1;
+/* CTA */
+.cta {
+    margin-top: 10px;
+    background: #e3f2fd;
+    padding: 10px;
+    border-left: 5px solid #1976d2;
 }
 
-/* ===== LISTS ===== */
-ul {
-    margin-left: 20px;
-    margin-top: 8px;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-/* ===== FOOTER (Sticky Bottom) ===== */
+/* ===== FOOTER ===== */
 .main-footer {
     background: #0d47a1;
-    color: #fff;
+    color: white;
     text-align: center;
-
-    padding: 18px;
-    margin-top: auto; /* 🔥 ensures bottom stick behavior */
+    padding: 15px;
+    margin-top: auto;
 }
 
-.footer-links {
-    font-size: 14px;
-    color: #bbdefb;
-    margin-top: 5px;
+/* ===== MOBILE ===== */
+@media (max-width: 900px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #0d47a1;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li a {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
 }
