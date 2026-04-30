@@ -1,71 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Internet Terminology -     FTP - Internet Terminology">
+    <meta name="description" content="Internet Terminology - FTP">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FTP - Internet Terminology</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header / Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="www.html">World Wide Web</a></li>
-            <li><a href="tcpip.html">TCP/IP</a></li>
-            <li><a href="browsers.html">Web Browsers</a></li>
-            <li><a href="webserver.html">Web Servers</a></li>
-            <li><a href="urls.html">URL</a></li>
-            <li><a href="dns.html">DNS</a></li>
-            <li><a href="http.html">HTTP</a></li>
-            <li><a href="intranet.html">Intranet</a></li>
-            <li><a href="extranet.html">Extranet</a></li>
-            <li><a href="multitier.html">Multitier Architecture</a></li>
-            <li><a href="ftp.html" class="active">FTP</a></li>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="web1.0.html">Web 1.0</a></li>
-            <li><a href="web2.0.html">Web 2.0</a></li>
-            <li><a href="web3.0.html">Web 3.0</a></li>
-            <li><a href="web4.0.html">Web 4.0</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>File Transfer Protocol (FTP)</h1>
-        <img src="images/ftp.png" alt="FTP protocol illustration">
-        <p><strong>File Transfer Protocol (FTP)</strong> is a standard network protocol used for the transfer of computer files between a client and server on a computer network. FTP is built on a client-server model architecture and uses separate control and data connections between the client and the server.</p>
-        <p>FTP allows users to upload, download, and manage files on a remote server. It requires authentication (username and password) for secure access, though anonymous FTP may be available for public file repositories. Common FTP clients include FileZilla, WinSCP, and Cyberduck.</p>
-        <h2>History and Evolution</h2>
-        <p>FTP was first standardized in the early 1970s (RFC 114, 1971) and has been widely used for decades to transfer files over the Internet and private networks. Over time, more secure alternatives such as SFTP (SSH File Transfer Protocol) and FTPS (FTP Secure) have been developed to address FTP's lack of encryption.</p>
-        <h2>How FTP Works</h2>
-        <ul>
-            <li><strong>Control Connection:</strong> Used for sending commands and responses between the client and server (typically on port 21).</li>
-            <li><strong>Data Connection:</strong> Used for transferring files and directory listings (typically on port 20 or a negotiated port).</li>
-            <li>FTP can operate in <strong>active</strong> or <strong>passive</strong> mode, affecting how data connections are established.</li>
-        </ul>
-        <h2>Use Cases</h2>
-        <ul>
-            <li>Website maintenance: Uploading and downloading website files to and from web servers.</li>
-            <li>Software distribution: Providing public repositories for software downloads.</li>
-            <li>Backup and archival: Transferring large datasets between systems for backup purposes.</li>
-        </ul>
-        <h2>Security Considerations</h2>
-        <ul>
-            <li>Standard FTP transmits data, including credentials, in plain text, making it vulnerable to interception.</li>
-            <li>For secure file transfer, use SFTP (over SSH) or FTPS (FTP over SSL/TLS).</li>
-            <li>Restrict anonymous access and use strong authentication methods.</li>
-        </ul>
-        <h2>Related Protocols</h2>
-        <ul>
-            <li><strong>SFTP:</strong> Secure File Transfer Protocol, operates over SSH.</li>
-            <li><strong>FTPS:</strong> FTP Secure, adds SSL/TLS encryption to FTP.</li>
-            <li><strong>TFTP:</strong> Trivial File Transfer Protocol, a simpler, connectionless protocol used for basic file transfers.</li>
-        </ul>
-        <h2>Fun Fact</h2>
-        <p>Many universities and open-source projects still maintain public FTP servers for distributing large datasets and software packages.</p>
-    </div>
-    <footer>
-        <p>&copy; 2026 Internet Terminology Website. All rights reserved.</p>
+
+    <!-- ===== HEADER (Reusable) ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🌐 NetTerms</h2>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="www.html">WWW</a></li>
+                <li><a href="tcpip.html">TCP/IP</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="webserver.html">Servers</a></li>
+                <li><a href="urls.html">URL</a></li>
+                <li><a href="dns.html">DNS</a></li>
+                <li><a href="http.html">HTTP</a></li>
+                <li><a href="intranet.html">Intranet</a></li>
+                <li><a href="extranet.html">Extranet</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="multitier.html">Multitier</a></li>
+                        <li><a href="ftp.html" class="active">FTP</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="web1.0.html">Web1</a></li>
+                        <li><a href="web2.0.html">Web2</a></li>
+                        <li><a href="web3.0.html">Web3</a></li>
+                        <li><a href="web4.0.html">Web4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+        <section class="hero">
+            <h1>File Transfer Protocol (FTP)</h1>
+            <p class="intro">A standard protocol used to transfer files between client and server systems.</p>
+        </section>
+
+        <section class="info">
+
+            <img src="images/ftp.png" alt="FTP protocol illustration">
+
+            <h2>What is FTP?</h2>
+            <p>
+                File Transfer Protocol (FTP) is a network protocol used to transfer files between
+                a client and a server over a computer network. It follows a client-server model
+                and uses separate control and data connections.
+            </p>
+
+            <h2>How FTP Works</h2>
+            <ul>
+                <li><strong>Control Connection:</strong> Sends commands and responses (Port 21)</li>
+                <li><strong>Data Connection:</strong> Transfers files (Port 20 or dynamic ports)</li>
+                <li>Supports active and passive modes for connection handling</li>
+            </ul>
+
+            <h2>History</h2>
+            <p>
+                FTP was standardized in the early 1970s and became one of the earliest methods
+                for transferring files over the Internet. It has since evolved into more secure
+                versions like SFTP and FTPS.
+            </p>
+
+            <h2>Use Cases</h2>
+            <ul>
+                <li>Website file uploads and management</li>
+                <li>Software distribution</li>
+                <li>Large data backups and transfers</li>
+            </ul>
+
+            <h2>Security</h2>
+            <ul>
+                <li>Standard FTP is not encrypted</li>
+                <li>Credentials can be intercepted if not secured</li>
+                <li>Use SFTP or FTPS for secure transfers</li>
+            </ul>
+
+            <h2>Related Protocols</h2>
+            <ul>
+                <li><strong>SFTP:</strong> Secure file transfer over SSH</li>
+                <li><strong>FTPS:</strong> FTP with SSL/TLS encryption</li>
+                <li><strong>TFTP:</strong> Lightweight file transfer protocol</li>
+            </ul>
+
+            <div class="cta">
+                <p>💡 FTP is still widely used, but secure versions are now preferred.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Reusable) ===== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Internet Terminology</p>
+            <p class="footer-links">
+                Built for learning • Web Tech • Networking
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>

@@ -1,43 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="description" content="Internet Terminology -     DNS - Internet Terminology">
+    <meta name="description" content="Internet Terminology - DNS">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNS - Internet Terminology</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header / Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="www.html">World Wide Web</a></li>
-            <li><a href="tcpip.html">TCP/IP</a></li>
-            <li><a href="browsers.html">Web Browsers</a></li>
-            <li><a href="webserver.html">Web Servers</a></li>
-            <li><a href="urls.html">URL</a></li>
-            <li><a href="dns.html" class="active">DNS</a></li>
-            <li><a href="http.html">HTTP</a></li>
-            <li><a href="intranet.html">Intranet</a></li>
-            <li><a href="extranet.html">Extranet</a></li>
-            <li><a href="multitier.html">Multitier Architecture</a></li>
-            <li><a href="ftp.html">FTP</a></li>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="web1.0.html">Web 1.0</a></li>
-            <li><a href="web2.0.html">Web 2.0</a></li>
-            <li><a href="web3.0.html">Web 3.0</a></li>
-            <li><a href="web4.0.html">Web 4.0</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h1>Domain Name System (DNS)</h1>
-        <img src="images/dns-servers.jpg" alt="DNS servers illustration">
-        <p>The Domain Name System (DNS) is a hierarchical and decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It translates human-readable domain names (like www.example.com) into numerical IP addresses (like 192.0.2.1) that computers use to identify each other on the network.</p>
-        <p>DNS is essential for the functioning of the Internet because it allows users to access websites using easy-to-remember domain names instead of having to remember numeric IP addresses. It operates as a distributed database across many servers worldwide.</p>
-    </div>
-    <footer>
-        <p>&copy; 2026 Internet Terminology Website. All rights reserved.</p>
+
+    <!-- ===== HEADER (Reusable) ===== -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🌐 NetTerms</h2>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="www.html">WWW</a></li>
+                <li><a href="tcpip.html">TCP/IP</a></li>
+                <li><a href="browsers.html">Browsers</a></li>
+                <li><a href="webserver.html">Servers</a></li>
+                <li><a href="urls.html">URL</a></li>
+                <li><a href="dns.html" class="active">DNS</a></li>
+                <li><a href="http.html">HTTP</a></li>
+                <li><a href="intranet.html">Intranet</a></li>
+                <li><a href="extranet.html">Extranet</a></li>
+
+                <!-- DROPDOWN -->
+                <li class="dropdown">
+                    <a href="#">More ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="multitier.html">Multitier</a></li>
+                        <li><a href="ftp.html">FTP</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                        <li><a href="web1.0.html">Web1</a></li>
+                        <li><a href="web2.0.html">Web2</a></li>
+                        <li><a href="web3.0.html">Web3</a></li>
+                        <li><a href="web4.0.html">Web4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main class="content">
+
+        <section class="hero">
+            <h1>Domain Name System (DNS)</h1>
+            <p class="intro">The system that translates domain names into IP addresses.</p>
+        </section>
+
+        <section class="info">
+            <img src="images/dns-servers.jpg" alt="DNS servers illustration">
+
+            <h2>What is DNS?</h2>
+            <p>
+                The Domain Name System (DNS) is a hierarchical and decentralized naming system
+                used to identify computers and services on the Internet. It converts human-readable
+                domain names (like <strong>www.example.com</strong>) into IP addresses
+                (like <strong>192.0.2.1</strong>) that machines use to communicate.
+            </p>
+
+            <h2>How DNS Works</h2>
+            <p>
+                When you type a website address into your browser, DNS servers process the request
+                and return the correct IP address. This allows your browser to locate and load the
+                correct web server hosting the site.
+            </p>
+
+            <h2>Why DNS is Important</h2>
+            <ul>
+                <li>Eliminates the need to memorize IP addresses</li>
+                <li>Makes internet navigation user-friendly</li>
+                <li>Supports global internet infrastructure</li>
+                <li>Works as a distributed system for reliability</li>
+            </ul>
+
+            <div class="cta">
+                <p>💡 Think of DNS as the "phonebook of the internet".</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER (Reusable) ===== -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Internet Terminology</p>
+            <p class="footer-links">
+                Built for learning • Web Tech • Networking
+            </p>
+        </div>
     </footer>
+
 </body>
 </html>
