@@ -56,9 +56,30 @@
 
              <h2>Definition of URL</h2>
              <p>
-                 A Uniform Resource Locator (URL) is the address used to access resources on the Internet.
-                 It tells the browser where a resource is located and how to retrieve it.
+                 A Uniform Resource Locator (URL) is the standardized address system used to precisely locate and access any resource on the Internet or private networks. URLs provide a consistent method for browsers and other clients to specify exactly what resource they want from where, using a defined scheme that includes protocol, domain, path, and optional parameters. Every website, image, API endpoint, and web service has a unique URL. URLs are the foundation of web navigation and were developed by Tim Berners-Lee as part of the World Wide Web in 1989. Modern URLs can be complex, containing authentication information, port numbers, query parameters, and fragments, yet the browser interprets them to execute the correct connection and retrieve the desired resource.
              </p>
+             
+             <h2>Complete URL Structure and Components</h2>
+             <p>A full URL can contain: <code>protocol://[user:password@]host[:port]/path?query_string#fragment</code></p>
+             <ul>
+                <li><strong>Protocol/Scheme:</strong> Defines the communication method (http, https, ftp, mailto, file). HTTPS is secured with encryption, while HTTP is unencrypted</li>
+                <li><strong>User and Password:</strong> Optional authentication credentials for accessing protected resources (rarely used in modern URLs for security reasons)</li>
+                <li><strong>Host:</strong> Domain name or IP address of the server hosting the resource</li>
+                <li><strong>Port:</strong> Optional specific port on the server (default 80 for HTTP, 443 for HTTPS, 21 for FTP)</li>
+                <li><strong>Path:</strong> Location of the resource on the server's file system or application (e.g., /products/electronics/laptops)</li>
+                <li><strong>Query String:</strong> Parameters passed to the server as key-value pairs starting with ? and separated by & (e.g., ?search=laptop&price=500). Used by search engines, filters, and pagination</li>
+                <li><strong>Fragment:</strong> Specifies a location within the page (starting with #), causing the browser to scroll to that section without requesting new content from server</li>
+             </ul>
+             
+             <h2>URL Encoding (Percent Encoding)</h2>
+             <p>URLs contain only safe ASCII characters. Special characters must be encoded as %XX where XX is the character's hexadecimal value. Spaces become %20 or +. Special characters like ? = & # must be encoded in query strings to avoid conflicts. This encoding ensures URLs remain valid and unambiguous across all systems and protocols.</p>
+             
+             <h2>Types of URLs and Their Uses</h2>
+             <ul>
+                <li><strong>Absolute URLs:</strong> Complete addresses including protocol and domain; work from any location on any website. Used for external links to other domains</li>
+                <li><strong>Relative URLs:</strong> Paths relative to current location; use ../ to go up one directory or paths without domain. Used for internal links within same website for portability</li>
+                <li><strong>Root-Relative URLs:</strong> Start with / and reference from the website root, independent of current page location</li>
+             </ul>
 
             <h2>Structure of a URL</h2>
             <p>Example:</p>

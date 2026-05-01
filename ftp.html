@@ -56,10 +56,46 @@
 
              <h2>Definition of FTP</h2>
              <p>
-                 File Transfer Protocol (FTP) is a network protocol used to transfer files between
-                 a client and a server over a computer network. It follows a client-server model
-                 and uses separate control and data connections.
+                 File Transfer Protocol (FTP) is a network protocol and system used to transfer files between client computers and servers over a TCP/IP network connection. Standardized in 1971, FTP was one of the earliest internet protocols and remains widely used today for reliable file transfer operations despite security limitations. FTP operates using a client-server model where the client initiates connections and the server responds, using separate control and data connections to manage commands and file transfer independently. While traditional FTP operates in plain text without encryption, modern variants like SFTP (SSH File Transfer Protocol) and FTPS (FTP Secure) add encryption for security. FTP operates on port 21 for the control connection and either port 20 (active mode) or dynamic ports (passive mode) for data transfer.
              </p>
+             
+             <h2>How FTP Works - Detailed Process</h2>
+             <p>
+                FTP operates through a two-connection system: (1) The client establishes a control connection to the server on port 21, where the client sends commands (USER, PASS, LIST, GET, PUT, etc.); (2) The server responds to commands on this control connection but conducts actual file transfer on a separate data connection; (3) In active mode, the server initiates data connections back to the client; (4) In passive mode (more firewall-friendly), the client initiates data connections to the server; (5) File transfer happens separately from commands, allowing the control connection to remain open; (6) After transfer completion, either the control connection closes or remains open for additional commands.
+             </p>
+             
+             <h2>FTP Components and Connection Modes</h2>
+             <ul>
+                <li><strong>Control Connection:</strong> Persistent TCP connection on port 21 where commands are sent and responses received (text-based protocol using ASCII)</li>
+                <li><strong>Data Connection:</strong> Separate connection for transferring actual file content; established per-file on port 20 (active) or negotiated ports (passive)</li>
+                <li><strong>Active Mode FTP:</strong> Server initiates data connection to client; problematic behind firewalls blocking inbound connections</li>
+                <li><strong>Passive Mode FTP:</strong> Client initiates data connection to server; preferred when behind firewalls or NAT; server provides port information on control connection</li>
+                <li><strong>Transfer Modes:</strong> ASCII mode for text files preserves line endings during transfer; Binary mode transfers files exactly without conversion</li>
+             </ul>
+             
+             <h2>FTP Commands and Operations</h2>
+             <ul>
+                <li><strong>Authentication Commands:</strong> USER (username), PASS (password), QUIT (disconnect)</li>
+                <li><strong>Directory Navigation:</strong> PWD (current directory), CWD (change directory), LIST (list files), NLST (name list)</li>
+                <li><strong>File Operations:</strong> RETR (download/retrieve file), STOR (upload/store file), DELE (delete file), REN (rename)</li>
+                <li><strong>Directory Management:</strong> MKD (make directory), RMD (remove directory)</li>
+             </ul>
+             
+             <h2>Security Considerations and Evolution</h2>
+             <ul>
+                <li><strong>Plain Text Vulnerability:</strong> Standard FTP sends credentials and data unencrypted, vulnerable to interception and sniffing</li>
+                <li><strong>SFTP (SSH FTP):</strong> Uses SSH tunnel for encryption, adding security while maintaining FTP-like interface; recommended for sensitive files</li>
+                <li><strong>FTPS (FTP Secure):</strong> Adds SSL/TLS encryption to standard FTP; backward compatible with explicit and implicit modes</li>
+             </ul>
+             
+             <h2>Common FTP Uses</h2>
+             <ul>
+                <li>Uploading website files to web servers from development environments</li>
+                <li>Large file transfers where email or cloud storage would be impractical</li>
+                <li>Automated bulk file distribution to multiple servers</li>
+                <li>Data backups to remote FTP servers</li>
+                <li>Firmware updates and software distribution</li>
+             </ul>
 
             <h2>How FTP Works</h2>
             <ul>

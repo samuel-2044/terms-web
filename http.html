@@ -56,10 +56,38 @@
 
              <h2>Definition of HTTP</h2>
              <p>
-                 Hypertext Transfer Protocol (HTTP) is an application-layer protocol used for
-                 transferring hypermedia documents such as HTML. It enables communication
-                 between web browsers and web servers.
+                 Hypertext Transfer Protocol (HTTP) is an application-layer protocol and the foundational protocol of the World Wide Web that defines how messages are formatted and transmitted between clients (web browsers) and servers. HTTP operates on a stateless request-response model where each communication is independent and doesn't retain information about previous interactions. Developed by Tim Berners-Lee alongside HTML in 1989, HTTP has evolved through multiple versions (HTTP/1.1, HTTP/2, HTTP/3) to improve performance, security, and efficiency. HTTPS is the secure variant that adds encryption through SSL/TLS, protecting data from interception. HTTP uses port 80 while HTTPS uses port 443 by default.
              </p>
+             
+             <h2>How HTTP Operates</h2>
+             <p>
+                HTTP follows a strict client-server communication model. The client (browser) initiates a TCP connection and sends an HTTP request containing a method (GET, POST, etc.), the requested resource path, HTTP version, headers (containing metadata), and optionally a request body. The server receives this request, processes it, and sends back an HTTP response containing a status code (200, 404, 500, etc.), response headers, and a response body (usually HTML content). After the exchange, the connection typically closes. For multiple resources (images, stylesheets, scripts), the browser makes separate HTTP requests. This simple yet powerful model has enabled the entire World Wide Web.
+             </p>
+             
+             <h2>HTTP Methods and Their Purposes</h2>
+             <ul>
+                <li><strong>GET:</strong> Retrieves data from a server without modifying anything. Requests are idempotent (multiple identical requests produce the same result) and can be cached. Used for fetching web pages, images, and data</li>
+                <li><strong>POST:</strong> Submits data to a server for processing, often creating new resources. Requests may have side effects and are not cached. Used for form submissions, file uploads, and API requests</li>
+                <li><strong>PUT:</strong> Replaces an entire resource on the server with the request data. Idempotent—multiple identical PUT requests produce the same result. Used for updating resources</li>
+                <li><strong>DELETE:</strong> Removes a specified resource from the server. Idempotent operation used for deleting resources</li>
+                <li><strong>PATCH:</strong> Partially modifies a resource, sending only the changes rather than the entire resource. Used for incremental updates</li>
+                <li><strong>HEAD:</strong> Identical to GET but returns only headers without the response body. Used for checking resource modifications without downloading full content</li>
+             </ul>
+             
+             <h2>HTTP Status Codes Explained</h2>
+             <ul>
+                <li><strong>1xx (Informational):</strong> Provisional responses indicating request received and processing continues</li>
+                <li><strong>2xx (Success):</strong> Request successful; 200 OK indicates complete success, 201 Created indicates resource creation</li>
+                <li><strong>3xx (Redirection):</strong> Further action required; 301 Permanent Redirect, 302 Temporary Redirect, 304 Not Modified (use cached version)</li>
+                <li><strong>4xx (Client Error):</strong> Client request invalid; 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests</li>
+                <li><strong>5xx (Server Error):</strong> Server failed; 500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable</li>
+             </ul>
+             
+             <h2>HTTP vs HTTPS Security</h2>
+             <ul>
+                <li><strong>HTTP:</strong> Unencrypted transmission means sensitive data (passwords, credit cards) is visible to anyone intercepting traffic. Vulnerable to man-in-the-middle attacks. Should only be used for non-sensitive public content</li>
+                <li><strong>HTTPS:</strong> Encrypted transmission using SSL/TLS protocols. Provides authentication (verifies server identity), confidentiality (data is encrypted), and integrity (data cannot be altered). Essential for any site handling sensitive information. Modern browsers warn or refuse to load non-HTTPS pages with forms</li>
+             </ul>
 
             <h2>How HTTP Works</h2>
             <p>

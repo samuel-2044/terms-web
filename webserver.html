@@ -56,9 +56,43 @@
 
              <h2>Definition of Web Server</h2>
              <p>
-                 A web server is a system (hardware + software) that delivers web pages to users
-                 through browsers using HTTP/HTTPS protocols.
+                 A web server is both a physical computer (hardware) and the software application running on it that stores, processes, and delivers web content to clients over the Internet using HTTP/HTTPS protocols. Web servers form the backbone of the World Wide Web, hosting millions of websites and handling billions of requests daily from browsers around the world. They listen for incoming HTTP requests on designated ports, process those requests according to server-side logic, retrieve or generate appropriate responses, and send the content back to clients. Modern web servers handle complex tasks including security (SSL/TLS encryption), performance (caching, compression), scalability (load balancing), and dynamic content generation through applications.
              </p>
+             
+             <h2>Key Web Server Components</h2>
+             <ul>
+                <li><strong>Request Handler:</strong> Receives HTTP requests and routes them to appropriate processing logic</li>
+                <li><strong>File System:</strong> Stores static content (HTML, CSS, JavaScript, images, documents) served directly to clients</li>
+                <li><strong>Application Engine:</strong> Executes server-side code (PHP, Python, Node.js, Java) to generate dynamic content</li>
+                <li><strong>Database Connection:</strong> Retrieves and stores data in databases (MySQL, PostgreSQL, MongoDB) for dynamic websites</li>
+                <li><strong>Security Module:</strong> Enforces SSL/TLS encryption, validates requests, prevents attacks, manages authentication</li>
+                <li><strong>Caching System:</strong> Stores frequently accessed content to reduce disk I/O and improve performance</li>
+                <li><strong>Logging System:</strong> Records all requests, errors, and events for monitoring and troubleshooting</li>
+             </ul>
+             
+             <h2>How Web Servers Process Requests</h2>
+             <p>
+                When a browser requests a resource, the server performs the following: (1) Receives the HTTP request and parses the method, URL, and headers; (2) Performs authentication and authorization checks; (3) Maps the URL path to a file or application; (4) For static content, reads the file from disk and sends it with appropriate headers; (5) For dynamic content, executes the necessary application logic, queries databases if needed, and generates HTML; (6) Compresses the response if applicable; (7) Sends the complete HTTP response with status code, headers, and body back to the client; (8) Logs the request for analytics and monitoring.
+             </p>
+             
+             <h2>Types of Web Server Software</h2>
+             <ul>
+                <li><strong>Apache HTTP Server:</strong> Open-source, modular architecture, powers ~30% of websites, supports extensive customization through modules</li>
+                <li><strong>Nginx (Engine-X):</strong> Modern, lightweight, event-driven design, excellent for high-concurrency scenarios, increasingly popular for microservices</li>
+                <li><strong>Microsoft IIS (Internet Information Services):</strong> Windows-native server, integrated with Active Directory and .NET, common in enterprise Windows environments</li>
+                <li><strong>Node.js:</strong> JavaScript-based, single-threaded event loop, excellent for real-time applications and APIs</li>
+                <li><strong>Tomcat:</strong> Java-based application server, common for Java-based enterprise applications</li>
+                <li><strong>Caddy:</strong> Modern, automatic HTTPS, easy configuration, growing in popularity for simplicity</li>
+             </ul>
+             
+             <h2>Primary Web Server Uses</h2>
+             <ul>
+                <li>Hosting websites for public access and information retrieval</li>
+                <li>Running web applications and business logic (CRM, e-commerce platforms, SaaS)</li>
+                <li>Serving APIs for mobile apps and third-party integrations</li>
+                <li>Streaming media content (video, audio, large files)</li>
+                <li>Handling file uploads and collaborative document sharing</li>
+             </ul>
 
             <h2>How it Works</h2>
             <ul>

@@ -55,11 +55,41 @@
 
              <h2>Definition of DNS</h2>
              <p>
-                 The Domain Name System (DNS) is a hierarchical and decentralized naming system
-                 used to identify computers and services on the Internet. It converts human-readable
-                 domain names (like <strong>www.example.com</strong>) into IP addresses
-                 (like <strong>192.0.2.1</strong>) that machines use to communicate.
+                 The Domain Name System (DNS) is a hierarchical, distributed naming system and database protocol that translates human-readable domain names into numerical IP addresses that computers use to locate and communicate with each other over networks. DNS functions as the "phonebook of the Internet," allowing users to access websites using memorable domain names like "google.com" instead of remembering complex IP addresses like "142.250.80.46." Operating on a global scale with thousands of DNS servers coordinated across the world, DNS is absolutely critical infrastructure—without it, the modern Internet as we know it would be unusable for everyday people. DNS runs on port 53 and uses both UDP and TCP protocols for reliability and performance.
              </p>
+             
+             <h2>How DNS Resolution Occurs</h2>
+             <p>
+                When you type a URL into your browser, a complex chain of events takes place. Your browser queries your configured DNS resolver (often provided by your ISP or services like Google DNS). The resolver doesn't have all domain information stored locally, so it begins a recursive search. It queries a root nameserver, which directs it to a TLD (Top-Level Domain) nameserver responsible for that domain's extension (.com, .org, etc.). The TLD server points to the authoritative nameserver for that specific domain. The authoritative nameserver provides the actual IP address, which travels back through the chain to your browser. Your browser can then connect to the web server at that IP address. This entire process typically takes milliseconds and is cached at multiple levels to improve performance.
+             </p>
+             
+             <h2>Key DNS Components</h2>
+             <ul>
+                <li><strong>DNS Resolver (Recursive Resolver):</strong> Typically operated by ISPs or third-party providers (Google, Cloudflare), handles queries from clients and performs the recursive search on their behalf</li>
+                <li><strong>Root Nameserver:</strong> 13 globally distributed servers that point to appropriate TLD servers; the starting point for all DNS resolution</li>
+                <li><strong>TLD Nameserver:</strong> Manages all domains for a specific top-level domain (.com, .org, .edu, country codes) and directs queries to authoritative servers</li>
+                <li><strong>Authoritative Nameserver:</strong> Contains actual DNS records for a specific domain and provides definitive answers to DNS queries</li>
+                <li><strong>DNS Records:</strong> Individual entries that map domain names to specific information like IP addresses, mail servers, or text records</li>
+             </ul>
+             
+             <h2>Common DNS Record Types</h2>
+             <ul>
+                <li><strong>A Record:</strong> Maps a domain to a single IPv4 address; the most basic DNS record type</li>
+                <li><strong>AAAA Record:</strong> Maps a domain to an IPv6 address, enabling support for newer 128-bit IP addressing</li>
+                <li><strong>CNAME (Canonical Name):</strong> Creates an alias for another domain; useful for subdomains and CDN integration</li>
+                <li><strong>MX Record:</strong> Specifies which mail servers handle email for the domain; essential for email delivery</li>
+                <li><strong>TXT Record:</strong> Stores text information used for domain verification, DKIM signatures, and SPF records for email authentication</li>
+                <li><strong>NS Record:</strong> Identifies authoritative nameservers for the domain</li>
+             </ul>
+             
+             <h2>Primary Uses of DNS</h2>
+             <ul>
+                <li>Making the internet accessible by allowing human-readable domain names instead of memorized IP addresses</li>
+                <li>Load balancing by distributing traffic across multiple servers through DNS records</li>
+                <li>Email routing by directing mail servers to appropriate locations</li>
+                <li>Enabling domain reputation and security through DNS verification protocols</li>
+                <li>Content delivery by pointing users to geographically closest servers</li>
+             </ul>
 
             <h2>How DNS Works</h2>
             <p>

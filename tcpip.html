@@ -56,24 +56,28 @@
 
              <h2>Definition of TCP/IP</h2>
              <p>
-                 TCP/IP (Transmission Control Protocol/Internet Protocol) is a set of communication
-                 protocols that enables devices to connect and exchange data over the Internet and
-                 private networks.
+                 TCP/IP (Transmission Control Protocol/Internet Protocol) is the fundamental suite of communication protocols that forms the backbone of modern internet and networking infrastructure. It defines how data is packetized, addressed, transmitted, routed, and reassembled across networks. TCP/IP enables reliable, ordered communication between devices regardless of manufacturer or operating system, making it the universal standard for global internet connectivity. Developed in the 1970s by the U.S. Department of Defense, TCP/IP has become the de facto standard for all internet communication and remains the most widely used networking protocol suite worldwide.
              </p>
 
-            <h2>TCP/IP Layer Model</h2>
+            <h2>TCP/IP Layer Model - The Four-Layer Architecture</h2>
+            <p>TCP/IP uses a layered model where each layer has specific responsibilities and communicates with layers above and below it:</p>
             <ul>
-                <li><strong>Application Layer:</strong> HTTP, FTP, SMTP, DNS</li>
-                <li><strong>Transport Layer:</strong> TCP (reliable), UDP (fast)</li>
-                <li><strong>Internet Layer:</strong> IP, ICMP, ARP</li>
-                <li><strong>Network Access Layer:</strong> Ethernet, Wi-Fi</li>
+                <li><strong>Application Layer:</strong> Where user applications operate. Protocols include HTTP/HTTPS (web), SMTP (email), FTP (file transfer), DNS (domain names), SSH (secure shell), Telnet (remote access)</li>
+                <li><strong>Transport Layer:</strong> Manages end-to-end communication and data flow. TCP provides reliable, ordered delivery with error checking. UDP offers fast, connectionless transmission without guarantees</li>
+                <li><strong>Internet Layer:</strong> Handles routing and logical addressing. IP manages packet routing across networks. ICMP enables diagnostic functions like ping. ARP resolves IP addresses to physical MAC addresses</li>
+                <li><strong>Network Access Layer (Link Layer):</strong> Handles physical transmission. Includes Ethernet for wired networks and Wi-Fi for wireless. Manages physical addressing and hardware interfaces</li>
             </ul>
 
-            <h2>Key Protocols</h2>
+            <h2>How TCP/IP Works</h2>
+            <p>
+                When you send data over TCP/IP, the application layer breaks the information into smaller pieces. TCP/IP adds addressing information (IP header) and ensures delivery (TCP header). The data is broken into packets, each containing the sender's IP address, receiver's IP address, and a portion of the data. These packets are sent across the network, potentially taking different routes to reach the destination. At each router, the IP address is examined to determine the next hop. Upon arrival, the transport layer verifies all packets are received, reassembles them in the correct order, and checks for errors. Finally, the data is delivered to the receiving application.
+            </p>
+            
+            <h2>Key Protocols Explained</h2>
             <ul>
-                <li><strong>TCP:</strong> Ensures reliable, ordered data delivery</li>
-                <li><strong>IP:</strong> Handles addressing and routing of packets</li>
-                <li><strong>UDP:</strong> Fast communication with no delivery guarantees</li>
+                <li><strong>TCP (Transmission Control Protocol):</strong> Ensures reliable, ordered, and error-checked data delivery. Establishes a connection (three-way handshake), sends data in sequence, confirms receipt, and handles retransmission of lost packets. Used for applications requiring accuracy like email, web browsing, and file transfer</li>
+                <li><strong>IP (Internet Protocol):</strong> Handles logical addressing through IP addresses and routing of packets across networks. Determines the path packets take from source to destination. Two versions: IPv4 (32-bit addresses) and IPv6 (128-bit addresses)</li>
+                <li><strong>UDP (User Datagram Protocol):</strong> Provides fast, connectionless communication without delivery guarantees. No connection setup needed, lower overhead than TCP. Ideal for speed-critical applications like video streaming, online gaming, and VoIP where occasional packet loss is acceptable</li>
             </ul>
 
             <h2>Use Cases</h2>
