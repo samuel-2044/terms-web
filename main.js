@@ -20,24 +20,3 @@ document.querySelectorAll(".navbar a").forEach(link => {
         hamburger.textContent = "☰";
     });
 });
-
-// Dropdown mobile toggle
-// Toggle only when clicking the dropdown parent anchor, not menu items
-document.querySelectorAll(".dropdown > a").forEach(toggle => {
-    toggle.addEventListener("click", (e) => {
-        if (window.innerWidth <= 900) {
-            e.preventDefault();
-            const drop = toggle.parentElement;
-            drop.classList.toggle("open");
-        }
-    });
-});
-
-// Close dropdown when clicking outside
-document.addEventListener("click", (e) => {
-    if (!e.target.closest(".dropdown")) {
-        document.querySelectorAll(".dropdown.open").forEach(drop => {
-            drop.classList.remove("open");
-        });
-    }
-});
